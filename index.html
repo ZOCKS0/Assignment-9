@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+<div class="container">
+
+ <div class="d-flex justify-content-center">
+
+    <h1 class="my-5 position-relative">Bookmarker</h1>
+
+</div>
+
+<section class="container d-flex flex-column py-4">
+
+<h2 class="m-auto py-2"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+
+<div class="form-group mb-3">
+<label for="sitename"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+<input oninput="validatename()" type="text" id="sitename" class="form-control my-3" placeholder="Bookmark Name">
+</div>
+
+<div class="form-group mb-3">
+<label for="url"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+<input oninput="validateurl()" type="text" id="url" class="form-control my-3" placeholder="Website URL">
+</div>
+
+<button onclick="restore()" class="btn btn-danger m-auto py-2 px-5 ">Submit</button>
+
+<div id="alert" class="d-none text-danger p-0">
+<p >Site Name or Url is not valid, Please follow the rules below :</p>
+<ul class="ul">
+    <li><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters and the first character is capital</li>
+    <li><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one (Must contain in the start [www.] + the site url + [.com])</li>
+</ul>
+</div>
+</section>
+
+<table class="text-center bg-white table my-5">
+    <thead>
+        <th>Index</th>
+        <th>Website Name</th>
+        <th>Visit</th>
+        <th>Delete</th>
+    </thead>
+
+    <tbody id="overhere" >
+
+    </tbody>
+</table>
+
+</div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
